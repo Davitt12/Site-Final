@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cliques</title>
+</head>
+<body>
+
+    <h1>Contador de Cliques</h1>
+    <p>Clique no botão abaixo para aumentar o contador.</p>
+
+    <button id="btnContar">Clique aqui</button>
+    <p id="contador">0</p>
+    <button onclick="mostrarMensagem()">Mostrar Mensagem Personalizada!</button>
+    <script>
+
+        function mostrarMensagem() {
+    const nome = prompt('Escreva alguma coisa! ');
+            if(nome) {
+                document.getElementById('output').innerHTML = `Olá, ${nome}! Bem vindo(a) ao nosso site.`; 
+            }
+        }
+
+        let contador = 0;
+        // Seleciona o botão e o elemento para exibir o contador
+        const btnContar = document.getElementById('btnContar');
+        const contadorElement = document.getElementById('contador');
+
+        // Função para atualizar o contador
+        btnContar.addEventListener('click', function() {
+            contador++;
+            contadorElement.textContent = contador;
+        });
+    </script>
+
+</body>
+</html>
